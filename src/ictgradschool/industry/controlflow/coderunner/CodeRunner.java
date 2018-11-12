@@ -88,8 +88,8 @@ public class CodeRunner {
         String reverseStr = "";
         // TODO write answer for Q4
         int i=str.length();
-        while (i>=0){
-            reverseStr=reverseStr+str.charAt(i);
+        while (i>0){
+            reverseStr=reverseStr+str.charAt(i-1);
             i--;
         }
         return reverseStr;
