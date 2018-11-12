@@ -38,6 +38,14 @@ public class CodeRunner {
     public boolean isALeapYear(int year) {
         boolean leapYear = false;
         // TODO write answer for Q2
+        if (year % 4==0){
+            leapYear=true;
+
+        }
+        if (year%100==0 && year%400!=0){
+            leapYear=false;
+        }
+
         return leapYear;
     }
     /** isALeapYear(int) => boolean **/
@@ -54,6 +62,19 @@ public class CodeRunner {
     public int reverseInt(int number) {
         int reverseNum = 0;
         // TODO write answer for Q3
+        String numString = "";
+        if(number<0){
+            numString=numString+"-";
+        }
+
+        while (number>0){
+            int digit = number % 10;
+
+            number/=10;
+
+            numString=numString+digit;
+        }
+        reverseNum=Integer.parseInt(numString);
         return reverseNum;
     }
     /** reverseInt(int) => void **/
