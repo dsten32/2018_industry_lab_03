@@ -161,8 +161,11 @@ public class CodeRunner {
     public boolean isPrime(int num) {
         // TODO write answer for Q7
         int maxDiv = num/2;
-        for (int i =2;i<=maxDiv;i++){
-            if (num%i==0){
+        if(maxDiv==0){
+            return false;
+        }
+        for (int i = 2;i<=maxDiv;i++){
+            if (num % i == 0){
                 return false;
             }
         }
