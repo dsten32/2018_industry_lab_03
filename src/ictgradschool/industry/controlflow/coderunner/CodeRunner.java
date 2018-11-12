@@ -226,6 +226,9 @@ public class CodeRunner {
             testPrime++;
         }
         primesStr=primesStr.trim();
+        if (primesStr.equals("")){
+            primesStr="No prime number found";
+        }
         return primesStr;
     }
 }
