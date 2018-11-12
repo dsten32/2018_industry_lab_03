@@ -17,6 +17,13 @@ public class CodeRunner {
     public String areSameName(String firstName, String secondName) {
         String message = "";
         // TODO write answer to Q1
+        if (firstName.equals(secondName)) {
+            message = "Same name";
+        } else if (firstName.charAt(0)==secondName.charAt(0)){
+            message="Same first letter";
+        } else {
+            message="No match";
+        }
         return message;
     }
     /** areSameName(String, String) => String **/
