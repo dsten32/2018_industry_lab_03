@@ -221,8 +221,11 @@ public class CodeRunner {
         while (testPrime<=num) {
             if (isPrime(testPrime)) {
             primesStr=primesStr+testPrime+" ";
+
             }
+            testPrime++;
         }
-        return primesStr.trim();
+        primesStr=primesStr.trim();
+        return primesStr;
     }
 }
