@@ -216,6 +216,13 @@ public class CodeRunner {
     public String printPrimeNumbers(int num) {
         String primesStr = "";
         // TODO write answer for Q10
-        return primesStr;
+
+        int testPrime = 1;
+        while (testPrime<=num) {
+            if (isPrime(testPrime)) {
+            primesStr=primesStr+testPrime+" ";
+            }
+        }
+        return primesStr.trim();
     }
 }
