@@ -63,8 +63,7 @@ public class CodeRunner {
         int reverseNum = 0;
         // TODO write answer for Q3
         String numString = "";
-        Boolean isNegative = false;
-        isNegative = (number > 0);
+        Boolean isNegative = (number > 0);
 
         while (number>0){
             int digit = number % 10;
