@@ -63,16 +63,23 @@ public class CodeRunner {
         int reverseNum = 0;
         // TODO write answer for Q3
         String numString = "";
-
+        Boolean isNegative = false;
+        isNegative = (number > 0);
 
         while (number>0){
             int digit = number % 10;
 
+            numString=numString+digit;
+
             number/=10;
 
-            numString=numString+digit;
         }
+
         reverseNum=Integer.parseInt(numString);
+
+        if (isNegative){
+            reverseNum = reverseNum * -1;
+        }
         return reverseNum;
     }
     /** reverseInt(int) => void **/
