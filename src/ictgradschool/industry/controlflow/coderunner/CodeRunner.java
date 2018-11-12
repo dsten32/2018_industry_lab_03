@@ -107,6 +107,25 @@ public class CodeRunner {
     public String simpleMultiplicationTable(int num) {
         String multiplicationTable = "";
         // TODO write answer for Q5
+        int row=1;
+        while (row<=num){
+
+            int i=1;
+            while (i<=num){
+                if (i>1) {
+                    multiplicationTable = multiplicationTable + " " + (i * row);
+                } else {
+                    multiplicationTable = multiplicationTable + (i * row);
+                }
+                i++;
+            }
+            if (row<num) {
+                multiplicationTable = multiplicationTable + "\n";
+            }
+
+            row++;
+        }
+
         return multiplicationTable;
     }
     /** simpleMultiplicationTable(int) => void **/
@@ -121,6 +140,13 @@ public class CodeRunner {
     public String convertIntToColTitle(int num) {
         String columnName = "";
         // TODO write answer for Q6
+        if(num==0){
+            columnName="Input is invalid";
+        }
+
+
+
+
         return columnName;
     }
     /** convertIntToColTitle(int) => void **/
@@ -161,6 +187,11 @@ public class CodeRunner {
      */
     public boolean isStringPalindrome(String str) {
         // TODO write answer for Q9
+        String trimmedStr = (String) str.replaceAll(" ","");
+        String reverseStr = reverseString(trimmedStr);
+        if(trimmedStr.equals(reverseStr)){
+            return true;
+        }
         return false;
     }
     /** isStringPalindrome(String) => boolean **/
