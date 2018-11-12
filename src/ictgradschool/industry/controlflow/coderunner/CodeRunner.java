@@ -163,7 +163,7 @@ public class CodeRunner {
         int maxDiv = num/2;
         for (int i =2;i<=maxDiv;i++){
             if (num%i==0){
-                break;
+                return false;
             }
         }
         return true;
