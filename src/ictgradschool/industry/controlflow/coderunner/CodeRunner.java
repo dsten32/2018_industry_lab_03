@@ -63,10 +63,10 @@ public class CodeRunner {
         int reverseNum = 0;
         // TODO write answer for Q3
         String numString = "";
-        Boolean isNegative = (number > 0);
+        Boolean isNegative = (number < 0);
 
-        while (number>0){
-            int digit = number % 10;
+        while (Math.abs(number)>0){
+            int digit = Math.abs(number) % 10;
 
             numString=numString+digit;
 
@@ -189,6 +189,9 @@ public class CodeRunner {
      */
     public boolean isIntPalindrome(int num) {
         // TODO write answer for Q8
+        if(Math.abs(num)== Math.abs(reverseInt(num))){
+            return true;
+        }
         return false;
     }
     /** isIntPalindrom(int) => boolean **/
