@@ -63,9 +63,7 @@ public class CodeRunner {
         int reverseNum = 0;
         // TODO write answer for Q3
         String numString = "";
-        if(number<0){
-            numString=numString+"-";
-        }
+
 
         while (number>0){
             int digit = number % 10;
@@ -89,6 +87,11 @@ public class CodeRunner {
     public String reverseString(String str) {
         String reverseStr = "";
         // TODO write answer for Q4
+        int i=str.length();
+        while (i>=0){
+            reverseStr=reverseStr+str.charAt(i);
+            i--;
+        }
         return reverseStr;
     }
     /** reverseString(String) => void **/
