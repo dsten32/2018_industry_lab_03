@@ -56,6 +56,8 @@ public class RockPaperScissors {
         return playerChoice;
     }
 
+
+
     public void displayPlayerChoice(String name, String choice) {
         //  This method should print out a message stating that someone chose a particular thing (rock, paper or scissors)
         System.out.println(name + " chose " + choice + ".");
