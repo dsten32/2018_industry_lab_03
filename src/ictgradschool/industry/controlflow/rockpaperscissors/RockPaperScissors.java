@@ -36,11 +36,24 @@ public class RockPaperScissors {
     }
 
 
-    public int getPlayerChoice(){
+    public String getPlayerChoice(){
         System.out.print("Enter choice: ");
         String playerChoice = Keyboard.readInput();
+        switch (playerChoice){
+            case "1":
+                playerChoice = "Rock";
+                break;
+            case "2":
+                playerChoice = "Paper";
+                break;
+            case "3":
+                playerChoice = "Scissors";
+                break;
+            case "4":
+                break;
 
-        return Integer.parseInt(playerChoice);
+        }
+        return playerChoice;
     }
 
     private int getComputerChoice(){
