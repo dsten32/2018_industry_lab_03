@@ -1,5 +1,8 @@
 package ictgradschool.industry.controlflow.rockpaperscissors;
 
+
+import ictgradschool.Keyboard;
+
 /**
  A game of Rock, Paper Scissors
  */
@@ -19,9 +22,14 @@ public class RockPaperScissors {
 
     }
 
-    public String getPlayerChoice(){
+
+    public int getPlayerChoice(){
         System.out.println("Enter choice: ");
+        String playerChoice = Keyboard.readInput();
+        return Integer.parseInt(playerChoice);
     }
+
+    private
 
 
     public void displayPlayerChoice(String name, int choice) {
