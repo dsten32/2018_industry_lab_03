@@ -19,24 +19,27 @@ public class RockPaperScissors {
 
         // TODO Write your code here which calls your other methods in order to play the game. Implement this
 
-        getPlayerName();
+        String playerName = getPlayerName();
 
-        System.out.println("1. Rock /n2. Scissors /n3. Paper /n4. Quit");
+        System.out.println("1. Rock \n2. Scissors \n3. Paper \n4. Quit");
+
+        int playerChoice = getPlayerChoice();
+        displayPlayerChoice(playerName,playerChoice);
 
         // as detailed in the exercise sheet.
-
     }
 
     public String getPlayerName(){
-        System.out.println("Hi! What is your name? ");
+        System.out.print("Hi! What is your name? ");
         String playerName = Keyboard.readInput();
         return playerName;
     }
 
 
     public int getPlayerChoice(){
-        System.out.println("Enter choice: ");
+        System.out.print("Enter choice: ");
         String playerChoice = Keyboard.readInput();
+
         return Integer.parseInt(playerChoice);
     }
 
