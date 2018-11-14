@@ -29,7 +29,10 @@ public class RockPaperScissors {
         return Integer.parseInt(playerChoice);
     }
 
-    private
+    private int getComputerChoice(){
+        int computerChoice = (int) (Math.random()*3);
+        return computerChoice;
+    }
 
 
     public void displayPlayerChoice(String name, int choice) {
