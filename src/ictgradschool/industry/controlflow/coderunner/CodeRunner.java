@@ -151,7 +151,7 @@ public class CodeRunner {
 
         // TODO write answer for Q6
         if(num<=0){
-            columnName="Input is invalid";
+            return "Input is invalid";
         }
 
         while (Math.abs(num)>0){
