@@ -25,6 +25,8 @@ public class RockPaperScissors {
 
         String playerChoice = getPlayerChoice();
         displayPlayerChoice(playerName,playerChoice);
+        String computerChoice = getComputerChoice();
+        displayPlayerChoice("Computer",computerChoice);
 
         // as detailed in the exercise sheet.
     }
@@ -39,23 +41,27 @@ public class RockPaperScissors {
     public String getPlayerChoice(){
         System.out.print("Enter choice: ");
         String playerChoice = Keyboard.readInput();
-        switch (playerChoice){
+        playerChoice = makeChoice(playerChoice);
+        return playerChoice;
+    }
+
+    public String makeChoice(String num){
+        switch (num){
             case "1":
-                playerChoice = "Rock";
+                num = "Rock";
                 break;
             case "2":
-                playerChoice = "Paper";
+                num = "Paper";
                 break;
             case "3":
-                playerChoice = "Scissors";
+                num = "Scissors";
                 break;
             case "4":
                 break;
 
         }
-        return playerChoice;
+        return num;
     }
-
 
 
     public void displayPlayerChoice(String name, String choice) {
@@ -64,8 +70,10 @@ public class RockPaperScissors {
     }
 
 
-    private int getComputerChoice(){
-        int computerChoice = (int) (Math.random()*4);
+    private String getComputerChoice(){
+        String computerChoice = ""+ (Math.random()*4);
+
+        computerChoice = makeChoice(computerChoice);
         return computerChoice;
     }
 
