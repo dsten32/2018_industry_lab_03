@@ -18,6 +18,11 @@ public class RockPaperScissors {
     public void start() {
 
         // TODO Write your code here which calls your other methods in order to play the game. Implement this
+
+        getPlayerName();
+
+        System.out.println("1. Rock /n2. Scissors /n3. Paper /n4. Quit");
+
         // as detailed in the exercise sheet.
 
     }
