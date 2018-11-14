@@ -11,7 +11,7 @@ public class RockPaperScissors {
     public static final int ROCK = 1;
     public static final int PAPPER = 2;
     public static final int SCISSORS = 3;
-    public static final int QUIT = 4;
+
 
     //  Make similar constants for PAPER and SCISSORS, to improve readability of your code.
 
