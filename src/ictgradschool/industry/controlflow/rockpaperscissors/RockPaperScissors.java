@@ -22,6 +22,12 @@ public class RockPaperScissors {
 
     }
 
+    public String getPlayerName(){
+        System.out.println("Hi! What is your name? ");
+        String playerName = Keyboard.readInput();
+        return playerName;
+    }
+
 
     public int getPlayerChoice(){
         System.out.println("Enter choice: ");
