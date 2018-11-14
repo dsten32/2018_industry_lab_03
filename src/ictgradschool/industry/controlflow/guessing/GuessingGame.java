@@ -11,6 +11,7 @@ public class GuessingGame {
 
         //  Write your code here.
         int goal = (int) (Math.random()*100);
+//        System.out.println("Goal = " + goal);
         int guess = 0;
 
         while (guess!=goal){
