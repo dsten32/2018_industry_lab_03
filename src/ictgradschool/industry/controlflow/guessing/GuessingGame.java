@@ -19,7 +19,7 @@ public class GuessingGame {
 
             if (guess>goal){
                 System.out.println("Too high, try again.");
-            } else {
+            } else if (guess<goal){
                 System.out.println("Too low, try again.");
             }
         }

@@ -149,7 +149,7 @@ public class CodeRunner {
     public String convertIntToColTitle(int num) {
         String columnName = "";
 
-        // TODO write answer for Q6
+        //  write answer for Q6
         if(num<=0){
             return "Input is invalid";
         }
@@ -164,14 +164,7 @@ public class CodeRunner {
 
                     num /= 26;
                 }
-
         }
-
-//        else if (num % 26 ==0){
-//            character=(char)(num+64);
-//            columnName+=character;
-//        }
-
         return columnName;
     }
     /** convertIntToColTitle(int) => void **/

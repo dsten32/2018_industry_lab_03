@@ -6,17 +6,22 @@ package ictgradschool.industry.controlflow.rockpaperscissors;
 public class RockPaperScissors {
 
     public static final int ROCK = 1;
-    // TODO Make similar constants for PAPER and SCISSORS, to improve readability of your code.
+    public static final int PAPPER = 2;
+    public static final int SCISSORS = 3;
+
+    //  Make similar constants for PAPER and SCISSORS, to improve readability of your code.
 
     public void start() {
 
         // TODO Write your code here which calls your other methods in order to play the game. Implement this
         // as detailed in the exercise sheet.
+
     }
 
 
     public void displayPlayerChoice(String name, int choice) {
         // TODO This method should print out a message stating that someone chose a particular thing (rock, paper or scissors)
+        System.out.println(name + " chose " + choice);
     }
 
     public boolean userWins(int playerChoice, int computerChoice) {
