@@ -23,7 +23,7 @@ public class RockPaperScissors {
 
         System.out.println("1. Rock \n2. Scissors \n3. Paper \n4. Quit");
 
-        int playerChoice = getPlayerChoice();
+        String playerChoice = getPlayerChoice();
         displayPlayerChoice(playerName,playerChoice);
 
         // as detailed in the exercise sheet.
@@ -56,16 +56,18 @@ public class RockPaperScissors {
         return playerChoice;
     }
 
+    public void displayPlayerChoice(String name, String choice) {
+        //  This method should print out a message stating that someone chose a particular thing (rock, paper or scissors)
+        System.out.println(name + " chose " + choice + ".");
+    }
+
+
     private int getComputerChoice(){
-        int computerChoice = (int) (Math.random()*3);
+        int computerChoice = (int) (Math.random()*4);
         return computerChoice;
     }
 
 
-    public void displayPlayerChoice(String name, int choice) {
-        //  This method should print out a message stating that someone chose a particular thing (rock, paper or scissors)
-        System.out.println(name + " chose " + choice);
-    }
 
     public boolean userWins(int playerChoice, int computerChoice) {
         // TODO Determine who wins and return true if the player won, false otherwise.
