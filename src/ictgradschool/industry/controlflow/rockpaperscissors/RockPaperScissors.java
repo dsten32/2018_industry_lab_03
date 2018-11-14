@@ -86,6 +86,11 @@ public class RockPaperScissors {
 
     public boolean userWins(int playerChoice, int computerChoice) {
         // TODO Determine who wins and return true if the player won, false otherwise.
+        if (playerChoice==1 && computerChoice==2 || playerChoice==2 && computerChoice==3 || playerChoice==3 && computerChoice==1 || playerChoice == computerChoice ){
+            return false;
+        } else if (playerChoice==2 && computerChoice==1 || playerChoice==3 && computerChoice==2 || playerChoice==1 && computerChoice==3){
+            return true;
+        }
 
         return false;
     }
