@@ -21,10 +21,11 @@ public class RockPaperScissors {
 
         String playerName = getPlayerName();
 
-        System.out.println("1. Rock \n2. Scissors \n3. Paper \n4. Quit");
+        System.out.println("1. Rock \n2. Paper \n3. Scissors \n4. Quit");
 
         String playerChoice = getPlayerChoice();
         displayPlayerChoice(playerName,playerChoice);
+
         String computerChoice = getComputerChoice();
         displayPlayerChoice("Computer",computerChoice);
 
@@ -48,13 +49,13 @@ public class RockPaperScissors {
     public String makeChoice(String num){
         switch (num){
             case "1":
-                num = "Rock";
+                num = "rock";
                 break;
             case "2":
-                num = "Paper";
+                num = "paper";
                 break;
             case "3":
-                num = "Scissors";
+                num = "scissors";
                 break;
             case "4":
                 break;
@@ -71,7 +72,7 @@ public class RockPaperScissors {
 
 
     private String getComputerChoice(){
-        String computerChoice = ""+ (Math.random()*4);
+        String computerChoice = ""+ (int)((Math.random()*3)+1);
 
         computerChoice = makeChoice(computerChoice);
         return computerChoice;
