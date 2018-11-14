@@ -31,6 +31,7 @@ public class RockPaperScissors {
 
         displayPlayerChoice("Computer",computerChoice);
 
+        System.out.println(userWins(playerChoice,computerChoice));
 
 
         // as detailed in the exercise sheet.
@@ -45,7 +46,6 @@ public class RockPaperScissors {
     public int getPlayerChoice(){
         System.out.print("Enter choice: ");
         int playerChoice = Integer.parseInt(Keyboard.readInput());
-
         return playerChoice;
     }
 
@@ -79,7 +79,6 @@ public class RockPaperScissors {
 
     private int getComputerChoice(){
         int computerChoice = (int)((Math.random()*3)+1);
-
         return computerChoice;
     }
 
