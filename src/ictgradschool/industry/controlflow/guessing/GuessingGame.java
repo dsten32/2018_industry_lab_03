@@ -9,7 +9,7 @@ public class GuessingGame {
 
     public void start() {
 
-        // TODO Write your code here.
+        //  Write your code here.
         int goal = (int) (Math.random()*100);
         int guess = 0;
 

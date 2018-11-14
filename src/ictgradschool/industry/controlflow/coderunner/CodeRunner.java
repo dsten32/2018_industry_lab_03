@@ -16,7 +16,7 @@ public class CodeRunner {
      */
     public String areSameName(String firstName, String secondName) {
         String message = "";
-        // TODO write answer to Q1
+        //  write answer to Q1
         if (firstName.equals(secondName)) {
             message = "Same name";
         } else if (firstName.charAt(0)==secondName.charAt(0)){
@@ -37,7 +37,7 @@ public class CodeRunner {
      */
     public boolean isALeapYear(int year) {
         boolean leapYear = false;
-        // TODO write answer for Q2
+        //  write answer for Q2
         if (year % 4==0){
             leapYear=true;
 
@@ -61,7 +61,7 @@ public class CodeRunner {
      */
     public int reverseInt(int number) {
         int reverseNum = 0;
-        // TODO write answer for Q3
+        //  write answer for Q3
         String numString = "";
         if (number==0){
             numString = "0";
@@ -95,7 +95,7 @@ public class CodeRunner {
      */
     public String reverseString(String str) {
         String reverseStr = "";
-        // TODO write answer for Q4
+        //  write answer for Q4
         int i=str.length();
         while (i>0){
             reverseStr=reverseStr+str.charAt(i-1);
@@ -115,7 +115,7 @@ public class CodeRunner {
      */
     public String simpleMultiplicationTable(int num) {
         String multiplicationTable = "";
-        // TODO write answer for Q5
+        //  write answer for Q5
         int row=1;
         while (row<=num){
 
@@ -148,13 +148,29 @@ public class CodeRunner {
      */
     public String convertIntToColTitle(int num) {
         String columnName = "";
+
         // TODO write answer for Q6
-        if(num==0){
+        if(num<=0){
             columnName="Input is invalid";
         }
 
+        while (Math.abs(num)>0){
+                if (num%26==0){
+                    columnName = "Z"+columnName;
+                    num -= 26;
+                } else {
+                    char colChar = (char) (num % 26 + 64);
+                    columnName = colChar + columnName;
 
+                    num /= 26;
+                }
 
+        }
+
+//        else if (num % 26 ==0){
+//            character=(char)(num+64);
+//            columnName+=character;
+//        }
 
         return columnName;
     }
@@ -168,7 +184,7 @@ public class CodeRunner {
      * @return true is the given number is a prime, false otherwise
      */
     public boolean isPrime(int num) {
-        // TODO write answer for Q7
+        //  write answer for Q7
         int maxDiv = num/2;
         if(maxDiv==0){
             return false;
@@ -191,7 +207,7 @@ public class CodeRunner {
      * @return true is int is palindrome, false otherwise
      */
     public boolean isIntPalindrome(int num) {
-        // TODO write answer for Q8
+        //  write answer for Q8
 
         int reverseTheNumber = reverseInt(num);
         if(Math.abs(num)== Math.abs(reverseTheNumber)){
@@ -209,7 +225,7 @@ public class CodeRunner {
      * @return true if string is palindrome, false otherwise
      */
     public boolean isStringPalindrome(String str) {
-        // TODO write answer for Q9
+        //  write answer for Q9
         String trimmedStr = (String) str.replaceAll(" ","");
         String reverseStr = reverseString(trimmedStr);
         if(trimmedStr.equals(reverseStr)){
@@ -229,7 +245,7 @@ public class CodeRunner {
      */
     public String printPrimeNumbers(int num) {
         String primesStr = "";
-        // TODO write answer for Q10
+        //  write answer for Q10
 
         int testPrime = 1;
         while (testPrime<=num) {
