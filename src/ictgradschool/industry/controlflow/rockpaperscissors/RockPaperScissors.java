@@ -23,58 +23,63 @@ public class RockPaperScissors {
 
         System.out.println("1. Rock \n2. Paper \n3. Scissors \n4. Quit");
 
-        String playerChoice = getPlayerChoice();
+        int playerChoice = getPlayerChoice();
+
         displayPlayerChoice(playerName,playerChoice);
 
-        String computerChoice = getComputerChoice();
+        int computerChoice = getComputerChoice();
+
         displayPlayerChoice("Computer",computerChoice);
+
+
 
         // as detailed in the exercise sheet.
     }
 
     public String getPlayerName(){
         System.out.print("Hi! What is your name? ");
-        String playerName = Keyboard.readInput();
-        return playerName;
+        return Keyboard.readInput();
     }
 
 
-    public String getPlayerChoice(){
+    public int getPlayerChoice(){
         System.out.print("Enter choice: ");
-        String playerChoice = Keyboard.readInput();
-        playerChoice = makeChoice(playerChoice);
+        int playerChoice = Integer.parseInt(Keyboard.readInput());
+
         return playerChoice;
     }
 
-    public String makeChoice(String num){
+    public String makeChoice(int num){
+        String choice="";
         switch (num){
-            case "1":
-                num = "rock";
+
+            case 1:
+                choice = "rock";
                 break;
-            case "2":
-                num = "paper";
+            case 2:
+                choice = "paper";
                 break;
-            case "3":
-                num = "scissors";
+            case 3:
+                choice = "scissors";
                 break;
-            case "4":
+            case 4:
                 break;
 
         }
-        return num;
+        return choice;
     }
 
 
-    public void displayPlayerChoice(String name, String choice) {
+    public void displayPlayerChoice(String name, int choice) {
         //  This method should print out a message stating that someone chose a particular thing (rock, paper or scissors)
-        System.out.println(name + " chose " + choice + ".");
+        String userChoice = makeChoice(choice);
+        System.out.println(name + " chose " + userChoice + ".");
     }
 
 
-    private String getComputerChoice(){
-        String computerChoice = ""+ (int)((Math.random()*3)+1);
+    private int getComputerChoice(){
+        int computerChoice = (int)((Math.random()*3)+1);
 
-        computerChoice = makeChoice(computerChoice);
         return computerChoice;
     }
 
